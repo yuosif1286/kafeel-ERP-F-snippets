@@ -16,5 +16,10 @@
         "path": "./snippets/snippets.code-snippets"
       }
     ]
-  },"icon": "logo.png"
+  },"icon": "logo.png",
+  "publisher": "yuosifraedhashem",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuosif1286/kafeel-ERP-F-snippets.git"
+  }
 }
