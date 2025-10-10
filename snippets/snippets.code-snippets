@@ -1,0 +1,61 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// MSW (Mock Server Worker):
+	"Fetch  Data From (MSW)": {
+    "scope": "vue,javascript,typescript",
+    "prefix": "msw-fetch",
+    "body": [
+      "// Fetch pets data",
+      "const {data:data} = await useApi<any>(createUrl('/pages/fake-feature',",
+      "{",    
+	  "  query: {",
+      "    search: ''",
+      "  },",
+      "}));",
+      "",
+      "const features = computed((): Feature[] => data.value.features)"
+    ],
+    "description": "Fetch pets data using MSW mock API"
+  },
+  // This For Kafeel ERP - UI-Kit
+
+  //!Import
+	"Import KF-Advanced-Select From Ui-Kit": {
+    "scope": "vue,javascript,typescript",
+    "prefix": "kf-i-advanced-select",
+    "body": [
+		"import KFAdvanceSelect from \"ERP-UiKit/components/v2/KFAdvancedSelect\""
+    ],
+    "description": "This For import KFAdvanced Components."
+  },
+	"Import KF-Data-Table From Ui-Kit": {
+    "scope": "vue,javascript,typescript",
+    "prefix": "kf-i-datatable",
+    "body": [
+		"import KFDataTable from \"ERP-UiKit/components/KFDataTable\""
+    ],
+    "description": "This For import KFDataTable Components."
+  },
+	"Import KF-RequiredValidation From Ui-Kit": {
+    "scope": "vue,javascript,typescript",
+    "prefix": "kf-i-requiredValidation",
+    "body":[ "import {requiredValidator} from \"ERP-UiKit/helper/validations\""
+    ],
+    "description": "This For import requiredValidator Method."
+  },
+
+  //?Validation usage 
+  "kf-u-requiredValidation Ui-Kit": {
+    "scope": "vue-html,html",
+    "prefix": "kf-u-requiredValidation",
+    "body": [
+      "requiredValidator(actionRuleModel.name, t).value"
+    ],
+    "description": "This is for usage of Required Validation inside templates."
+  }
+}
