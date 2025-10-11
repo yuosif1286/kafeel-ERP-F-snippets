@@ -37,6 +37,35 @@
     ],
     "description": "Import requiredValidator method."
   },
+      "Import KFTree From uiKit": {
+        "prefix": "kf-i-tree-components",
+        "body": [
+            "import KFTree from \"ERP-UiKit/components/KFTree\";"
+        ],
+        "description": "Import KFTree Components From Ui-Kit"
+    },
+     "Import KFDialogWithDiscard Components": {
+        "prefix": "kf-i-dialog-with-discard",
+        "body": [
+            "import KFDialogWithDiscard from \"ERP-UiKit/components/KFDialogWithDiscard\";"
+        ],
+        "description": "Import DialogWithDiscard Components From UiKit"
+    },
+        "Import AppTextField From UiKit": {
+        "prefix": "i-app-text-field",
+        "body": [
+            "import AppTextField from \"ERP-UiKit/@core/components/elements/AppTextField\";"
+        ],
+        "description": "Import AppTextField Component From UiKit"
+    },
+        "Import AppDateTimePicker From Uikit": {
+        "prefix": "i-app-time-picker",
+        "body": [
+            "import AppDateTimePicker from \"ERP-UiKit/@core/components/elements/AppDateTimePicker\";"
+        ],
+        "description": "Import AppTimePicker Component From UiKit"
+    },
+
 
   "KF Required Validation Usage": {
     "prefix": "kf-u-requiredValidation",

@@ -1,9 +1,28 @@
-# Change Log
+# Changelog
 
-All notable changes to the "kafeel-snippets" extension will be documented in this file.
+## 0.0.8 (2025-10-11)
+- update change-log md file 
+- add New Snippets for import ( ` DialogWithDiscard ` And ` KFTree ` & ` AppTextField ` & ` AppDateTimePicker `)   Components
+## 0.0.7 (2025-10-11)
+- Published Kafeel ERP F snippets v0.0.6
+- Fix snippet loading for Vue & TypeScript
+- Update documentation and README
+## 0.0.7 (2025-10-11)
+- Published Kafeel ERP F snippets v0.0.6
+- Fix snippet loading for Vue & TypeScript
+- Update documentation and README
+## 0.0.6 (2025-10-11)
+- Published Kafeel ERP F snippets v0.0.6
+- Fix snippet loading for Vue & TypeScript
+- Update documentation and README
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## 0.0.5 (2025-10-11)
+- Added KFRequiredValidation snippet usage
+- Added KFDataTable import snippet
+- Added KFAdvancedSelect import snippet
+- Added MSW fetch API snippet
+- Improved README examples
 
-## [Unreleased]
-
-- Initial release
+## 0.0.4 (2025-10-10)
+- Initial public release of Kafeel ERP F snippets
+- Includes basic snippets for Vue, TypeScript, and template validations
