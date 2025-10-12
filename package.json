@@ -18,7 +18,11 @@
       {
         "language": "vue",
         "path": "./snippets/vue.json"
-      }
+      },
+        {
+      "language": "vue-html",
+      "path": "./snippets/vue-html.json"
+    }
     ]
   },
   "icon": "logo.png",

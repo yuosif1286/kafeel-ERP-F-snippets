@@ -23,7 +23,7 @@
   },
 
   "Import KF-Data-Table From Ui-Kit": {
-    "prefix": "kf-i-datatable",
+    "prefix": "kf-i-data-table",
     "body": [
       "import KFDataTable from \"ERP-UiKit/components/KFDataTable\""
     ],
@@ -71,14 +71,5 @@
             "import AppTextarea from \"ERP-UiKit/@core/components/elements/AppTextarea\";"
         ],
         "description": "This For Import AppTextArea components From Uikit"
-    },
-
-
-  "KF Required Validation Usage": {
-    "prefix": "kf-u-requiredValidation",
-    "body": [
-      "requiredValidator(actionRuleModel.name, t).value"
-    ],
-    "description": "Usage of Required Validation inside templates."
-  }
+    }
 }

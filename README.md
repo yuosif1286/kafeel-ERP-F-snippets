@@ -24,9 +24,11 @@ ext install yuosifraedhashem.alkafeel-erp-f-snippets
 | **Import RequiredValidation** | `kf-i-requiredValidation` | Import the `requiredValidator` method from ERP-UiKit. |
 | **Import KFTree** | `kf-i-tree-components` | Import the `KFTree` component from ERP-UiKit. |
 | **Import KFDialogWithDiscard** | `kf-i-dialog-with-discard` | Import the `KFDialogWithDiscard` component from ERP-UiKit. |
-| **Import AppTextField** | `i-app-text-field` | Import the `AppTextField` component from ERP-UiKit. |
+| **Import AppTextField** | `i-app-text-area` | Import the `AppTextField` component from ERP-UiKit. |
+| **Import AppTextArea** | `i-app-text-field` | Import the `AppTextArea` component from ERP-UiKit. |
 | **Import AppDateTimePicker** | `i-app-time-picker` | Import the `AppDateTimePicker` component from ERP-UiKit. |
 | **Use RequiredValidation** | `kf-u-requiredValidation` | Apply the `requiredValidator` helper in templates. |
+| **Use AppTextField** | `kf-u-app-text-field` | Apply the `AppTextField` helper in templates. |
 
 ---
 
