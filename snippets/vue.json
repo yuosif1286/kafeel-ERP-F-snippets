@@ -52,18 +52,25 @@
         "description": "Import DialogWithDiscard Components From UiKit"
     },
         "Import AppTextField From UiKit": {
-        "prefix": "i-app-text-field",
+        "prefix": "kf-i-app-text-field",
         "body": [
             "import AppTextField from \"ERP-UiKit/@core/components/elements/AppTextField\";"
         ],
         "description": "Import AppTextField Component From UiKit"
     },
         "Import AppDateTimePicker From Uikit": {
-        "prefix": "i-app-time-picker",
+        "prefix": "kf-i-app-time-picker",
         "body": [
             "import AppDateTimePicker from \"ERP-UiKit/@core/components/elements/AppDateTimePicker\";"
         ],
         "description": "Import AppTimePicker Component From UiKit"
+    },
+        "Import AppTextArea From UIKit": {
+        "prefix": "kf-i-app-text-area",
+        "body": [
+            "import AppTextarea from \"ERP-UiKit/@core/components/elements/AppTextarea\";"
+        ],
+        "description": "This For Import AppTextArea components From Uikit"
     },
 
 

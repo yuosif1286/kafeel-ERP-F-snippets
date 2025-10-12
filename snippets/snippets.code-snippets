@@ -14,35 +14,4 @@
     "description": "Fetch pets data using MSW mock API"
   },
 
-  "Import KF-Advanced-Select From Ui-Kit": {
-    "prefix": "kf-i-advanced-select",
-    "body": [
-      "import KFAdvanceSelect from \"ERP-UiKit/components/v2/KFAdvancedSelect\""
-    ],
-    "description": "Import KFAdvanced component."
-  },
-
-  "Import KF-Data-Table From Ui-Kit": {
-    "prefix": "kf-i-datatable",
-    "body": [
-      "import KFDataTable from \"ERP-UiKit/components/KFDataTable\""
-    ],
-    "description": "Import KFDataTable component."
-  },
-
-  "Import KF-RequiredValidation From Ui-Kit": {
-    "prefix": "kf-i-requiredValidation",
-    "body": [
-      "import { requiredValidator } from \"ERP-UiKit/helper/validations\""
-    ],
-    "description": "Import requiredValidator method."
-  },
-
-  "KF Required Validation Usage": {
-    "prefix": "kf-u-requiredValidation",
-    "body": [
-      "requiredValidator(actionRuleModel.name, t).value"
-    ],
-    "description": "Usage of Required Validation inside templates."
-  }
 }
