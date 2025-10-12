@@ -2,7 +2,7 @@
   "name": "alkafeel-erp-f-snippets",
   "displayName": "alkafeel-ERP-F-snippets",
   "description": "Custom AlKafeel Front End ERP  UI-Kit snippets",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "engines": {
     "vscode": "^1.105.0"
   },
@@ -19,10 +19,10 @@
         "language": "vue",
         "path": "./snippets/vue.json"
       },
-        {
-      "language": "vue-html",
-      "path": "./snippets/vue-html.json"
-    }
+      {
+        "language": "vue-html",
+        "path": "./snippets/vue-html.json"
+      }
     ]
   },
   "icon": "logo.png",
