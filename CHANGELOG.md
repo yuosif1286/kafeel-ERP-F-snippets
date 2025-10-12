@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.0.11 (2025-10-12)
+## 0.0.12 (2025-10-12)
 - add snippets  for language vue-html 
 - add New Snippets for Usage Case ( `AppTextField`)   Components
 ## 0.0.11 (2025-10-12)
