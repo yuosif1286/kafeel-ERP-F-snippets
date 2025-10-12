@@ -3,12 +3,14 @@ name: Publish VS Code Extension
 on:
   push:
     branches:
-      - main
       - master
     paths:
       - "package.json"
       - "snippets/**"
       - ".github/workflows/publish.yml"
+      
+permissions:
+  contents: write
 
 jobs:
   publish:
