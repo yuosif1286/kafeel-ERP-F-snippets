@@ -1,75 +1,27 @@
 {
-  "Fetch Data From (MSW)": {
-    "prefix": "msw-fetch",
-    "body": [
-      "// Fetch pets data",
-      "const { data: data } = await useApi<any>(createUrl('/pages/fake-feature', {",
-      "  query: {",
-      "    search: ''",
-      "  },",
-      "}));",
-      "",
-      "const features = computed((): Feature[] => data.value.features)"
-    ],
-    "description": "Fetch pets data using MSW mock API"
-  },
-
-  "Import KF-Advanced-Select From Ui-Kit": {
-    "prefix": "kf-i-advanced-select",
-    "body": [
-      "import KFAdvanceSelect from \"ERP-UiKit/components/v2/KFAdvancedSelect\""
-    ],
-    "description": "Import KFAdvanced component."
-  },
-
-  "Import KF-Data-Table From Ui-Kit": {
-    "prefix": "kf-i-data-table",
-    "body": [
-      "import KFDataTable from \"ERP-UiKit/components/KFDataTable\""
-    ],
-    "description": "Import KFDataTable component."
-  },
-
-  "Import KF-RequiredValidation From Ui-Kit": {
-    "prefix": "kf-i-requiredValidation",
-    "body": [
-      "import { requiredValidator } from \"ERP-UiKit/helper/validations\""
-    ],
-    "description": "Import requiredValidator method."
-  },
-      "Import KFTree From uiKit": {
-        "prefix": "kf-i-tree-components",
+      "Script with Typescript": {
+        "prefix": "script-ts-setup",
         "body": [
-            "import KFTree from \"ERP-UiKit/components/KFTree\";"
+            "<script setup lang=\"ts\">",
+            "</script>"
         ],
-        "description": "Import KFTree Components From Ui-Kit"
+        "description": "this For Add script typescript setup to use vue compstion api"
     },
-     "Import KFDialogWithDiscard Components": {
-        "prefix": "kf-i-dialog-with-discard",
+        "template tag": {
+        "prefix": "template-tag",
         "body": [
-            "import KFDialogWithDiscard from \"ERP-UiKit/components/KFDialogWithDiscard\";"
+            "<template>",
+            "</template>"
         ],
-        "description": "Import DialogWithDiscard Components From UiKit"
-    },
-        "Import AppTextField From UiKit": {
-        "prefix": "kf-i-app-text-field",
+        "description": "this for add template tag"
+    },    "template with script Typescript Setup": {
+        "prefix": "template-script-ts-setup",
         "body": [
-            "import AppTextField from \"ERP-UiKit/@core/components/elements/AppTextField\";"
+            "<script setup lang=\"ts\">",
+            "</script>",
+            "<template>",
+            "</template>"
         ],
-        "description": "Import AppTextField Component From UiKit"
-    },
-        "Import AppDateTimePicker From Uikit": {
-        "prefix": "kf-i-app-time-picker",
-        "body": [
-            "import AppDateTimePicker from \"ERP-UiKit/@core/components/elements/AppDateTimePicker\";"
-        ],
-        "description": "Import AppTimePicker Component From UiKit"
-    },
-        "Import AppTextArea From UIKit": {
-        "prefix": "kf-i-app-text-area",
-        "body": [
-            "import AppTextarea from \"ERP-UiKit/@core/components/elements/AppTextarea\";"
-        ],
-        "description": "This For Import AppTextArea components From Uikit"
+        "description": "this for add template tag with script setup typescript "
     }
 }

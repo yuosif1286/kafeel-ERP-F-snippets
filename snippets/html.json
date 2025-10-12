@@ -1,0 +1,76 @@
+{
+      "KF Required Validation Usage": {
+    "prefix": "kf-u-requiredValidation",
+    "body": [
+      "requiredValidator(actionRuleModel.name, t).value"
+    ],
+    "description": "Usage of Required Validation inside templates."
+  },
+      "usage Case AppTextField Component": {
+        "prefix": "kf-u-app-text-field",
+        "body": [
+            "\t\t\t\t<AppTextField",
+            "\t\t\t\t  v-model=\"model.name\"",
+            "\t\t\t\t  :rules=\"requiredValidator(model.name, t).value\"",
+            "\t\t\t\t  :label=\"t('employee.employees.child.children.table.name')\"",
+            "\t\t\t\t  :placeholder=\"",
+            "\t\t\t\t\tt('employee.employees.child.children.table.name')",
+            "\t\t\t\t  \"",
+            "\t\t\t\t/>"
+        ],
+        "description": "This Example To Usage Case AppTextField Component "
+    },  
+    "usage case AppTextarea  component": {
+        "prefix": "kf-u-app-text-area",
+        "body": [
+            "\t<AppTextarea",
+            "\t\t\t\t  v-model=\"model.note\"",
+            "\t\t\t\t  :counter=\"true\"",
+            "\t\t\t\t  :label=\"t('employee.employees.child.children.table.note')\"",
+            "\t\t\t\t  autocomplete=\"on\"",
+            "\t\t\t\t  height=\"29\"",
+            "\t\t\t\t  style=\"height: 129px !important\"",
+            "\t\t\t\t  rows=\"4\"",
+            "\t\t\t\t/>"
+        ],
+        "description": "This example usage case AppTextArea Component"
+    }, 
+    "usage case AppDateTimePicker components": {
+        "prefix": "kf-u-app-date-time-picker",
+        "body": [
+            "\t\t\t\t<AppDateTimePicker",
+            "\t\t\t\t  v-model=\"model.birthDate\"",
+            "\t\t\t\t  :rules=\"[(v: any) => !!v || t(`validation.required`)]\"",
+            "\t\t\t\t  :label=\"",
+            "\t\t\t\t\tt('employee.employees.child.children.table.birthDate')",
+            "\t\t\t\t  \"",
+            "\t\t\t\t  :placeholder=\"",
+            "\t\t\t\t\tt('employee.employees.child.children.table.birthDate')",
+            "\t\t\t\t  \"",
+            "\t\t\t\t/>"
+        ],
+        "description": "This example to usage case AppDateTimePicker Componnent "
+    },
+        "Elevation in Dark and light Mode": {
+        "prefix": "u-elevation",
+        "body": [
+            ":elevation=\"isDark ? 0 : 5\" "
+        ],
+        "description": "This To Get Value of Elevation in dark and light mode"
+    },
+        "Usage Case KFDialogWithDiscard Component": {
+        "prefix": "kf-u-dialog-with-discard",
+        "body": [
+            "  <KFDialogWithDiscard",
+            "\tv-model=\"dialog\"",
+            "\t:width=\"700\"",
+            "\t:observe=\"[jobPosition, currency]\"",
+            "\t:persistent=\"loading\"",
+            "  >",
+            "\t<template #default=\"{ isActive, handleClose }\">",
+            "\t</template>",
+            "\t</KFDialogWithDiscard>"
+        ],
+        "description": "this  example to usage case KFDialogWithDiscard component"
+    }
+}

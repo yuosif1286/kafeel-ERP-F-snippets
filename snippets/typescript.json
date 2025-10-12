@@ -1,0 +1,113 @@
+{
+  "Fetch Data From (MSW)": {
+    "prefix": "msw-fetch",
+    "body": [
+      "// Fetch pets data",
+      "const { data: data } = await useApi<any>(createUrl('/pages/fake-feature', {",
+      "  query: {",
+      "    search: ''",
+      "  },",
+      "}));",
+      "",
+      "const features = computed((): Feature[] => data.value.features)"
+    ],
+    "description": "Fetch pets data using MSW mock API"
+  },
+
+  "Import KF-Advanced-Select From Ui-Kit": {
+    "prefix": "kf-i-advanced-select",
+    "body": [
+      "import KFAdvanceSelect from \"ERP-UiKit/components/v2/KFAdvancedSelect\""
+    ],
+    "description": "Import KFAdvanced component."
+  },
+
+  "Import KF-Data-Table From Ui-Kit": {
+    "prefix": "kf-i-data-table",
+    "body": [
+      "import KFDataTable from \"ERP-UiKit/components/KFDataTable\""
+    ],
+    "description": "Import KFDataTable component."
+  },
+
+  "Import KF-RequiredValidation From Ui-Kit": {
+    "prefix": "kf-i-requiredValidation",
+    "body": [
+      "import { requiredValidator } from \"ERP-UiKit/helper/validations\""
+    ],
+    "description": "Import requiredValidator method."
+  },
+      "Import KFTree From uiKit": {
+        "prefix": "kf-i-tree-components",
+        "body": [
+            "import KFTree from \"ERP-UiKit/components/KFTree\";"
+        ],
+        "description": "Import KFTree Components From Ui-Kit"
+    },
+     "Import KFDialogWithDiscard Components": {
+        "prefix": "kf-i-dialog-with-discard",
+        "body": [
+            "import KFDialogWithDiscard from \"ERP-UiKit/components/KFDialogWithDiscard\";"
+        ],
+        "description": "Import DialogWithDiscard Components From UiKit"
+    },
+        "Import AppTextField From UiKit": {
+        "prefix": "kf-i-app-text-field",
+        "body": [
+            "import AppTextField from \"ERP-UiKit/@core/components/elements/AppTextField\";"
+        ],
+        "description": "Import AppTextField Component From UiKit"
+    },
+        "Import AppDateTimePicker From Uikit": {
+        "prefix": "kf-i-app-time-picker",
+        "body": [
+            "import AppDateTimePicker from \"ERP-UiKit/@core/components/elements/AppDateTimePicker\";"
+        ],
+        "description": "Import AppTimePicker Component From UiKit"
+    },
+        "Import AppTextArea From UIKit": {
+        "prefix": "kf-i-app-text-area",
+        "body": [
+            "import AppTextarea from \"ERP-UiKit/@core/components/elements/AppTextarea\";"
+        ],
+        "description": "This For Import AppTextArea components From Uikit"
+    },
+
+
+
+        "isDark Mode Computed Value From  current them": {
+        "prefix": "is-dark",
+        "body": [
+            "const isDark = computed(() => theme.current.value.dark);"
+        ],
+        "description": "this to get computed value of dark mode"
+    },
+        "use Theme From Vuetify ": {
+        "prefix": "use-theme",
+        "body": [
+            "const theme = useTheme();"
+        ],
+        "description": "this to get theme from vuetify"
+    },
+        "define emits example": {
+        "prefix": "emits-example",
+        "body": [
+            "const emits = defineEmits<{",
+            "  (e: \"close\"): void;",
+            "  (e: \"add\", item?: any): void;",
+            "  (e: \"update\", item?: any): void;",
+            "}>();"
+        ],
+        "description": "this for used define emits example"
+    },    "define model example": {
+        "prefix": "model-example",
+        "body": [
+            "const isEdit = defineModel<boolean>(\"edit\", {",
+            "  required: false,",
+            "  type: Boolean,",
+            "  default: false,",
+            "});"
+        ],
+        "description": "this example to used defineModel"
+    }
+}

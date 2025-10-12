@@ -12,16 +12,16 @@
   "contributes": {
     "snippets": [
       {
-        "language": "typescript",
-        "path": "./snippets/snippets.code-snippets"
-      },
-      {
         "language": "vue",
         "path": "./snippets/vue.json"
       },
       {
-        "language": "vue-html",
-        "path": "./snippets/vue-html.json"
+        "language": "typescript",
+        "path": "./snippets/typescript.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/html.json"
       }
     ]
   },
