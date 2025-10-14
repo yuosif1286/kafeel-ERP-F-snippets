@@ -6,6 +6,9 @@
   "engines": {
     "vscode": "^1.105.0"
   },
+  "scripts": {
+    "commit": "cz"
+  },
   "categories": [
     "Snippets"
   ],
@@ -30,5 +33,14 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/yuosif1286/kafeel-ERP-F-snippets.git"
+  },
+  "devDependencies": {
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
