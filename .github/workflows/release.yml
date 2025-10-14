@@ -25,15 +25,15 @@ jobs:
         with:
           node-version: 20
 
-      # ✅ Install pnpm globally before using it
       - name: Install pnpm
         run: npm install -g pnpm
 
       - name: Install dependencies
         run: pnpm install
 
+      # ✅ Use npm for vsce to avoid pnpm global bin issue
       - name: Install vsce
-        run: pnpm add -g vsce
+        run: npm install -g vsce
 
       - name: Bump version
         id: version
