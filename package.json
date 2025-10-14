@@ -7,7 +7,8 @@
     "vscode": "^1.105.0"
   },
   "scripts": {
-    "commit": "cz"
+    "commit": "cz",
+    "prepare": "husky install"
   },
   "categories": [
     "Snippets"
@@ -35,8 +36,11 @@
     "url": "https://github.com/yuosif1286/kafeel-ERP-F-snippets.git"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
     "commitizen": "^4.3.1",
-    "cz-conventional-changelog": "^3.3.0"
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.1.7"
   },
   "config": {
     "commitizen": {
