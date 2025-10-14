@@ -25,36 +25,13 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install pnpm
-        run: npm install -g pnpm
-
       - name: Install dependencies
-        run: pnpm install
-
-      # ✅ Use npm for vsce to avoid pnpm global bin issue
-      - name: Install vsce
-        run: npm install -g vsce
-
-      - name: Bump version
-        id: version
         run: |
-          current=$(node -p "require('./package.json').version")
-          next=$(pnpm version patch --no-git-tag-version)
-          echo "version=$next" >> $GITHUB_ENV
-          echo "Bumped version from $current to $next"
+          npm install -g vsce
+          pnpm install -D semantic-release @semantic-release/changelog @semantic-release/git @semantic-release/npm @semantic-release/github @semantic-release/commit-analyzer @semantic-release/release-notes-generator
 
-      - name: Package extension
-        run: vsce package
-
-      - name: Publish extension
+      - name: Run semantic-release
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VSCE_PAT: ${{ secrets.VSCE_TOKEN }}
-        run: vsce publish -p $VSCE_PAT
-
-      - name: Commit updated package.json
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add package.json
-          git commit -m "🔼 Bump version to ${{ env.version }}" || echo "No changes to commit"
-          git push
+        run: npx semantic-release
