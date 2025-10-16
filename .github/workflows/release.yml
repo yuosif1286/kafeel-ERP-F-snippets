@@ -9,9 +9,8 @@ on:
       - "snippets/**"
       - ".github/workflows/release.yml"
 
-# Required for semantic-release to push commits/tags
 permissions:
-  contents: write
+  contents: write  # required for semantic-release to create tags and releases
 
 jobs:
   release:
@@ -22,39 +21,43 @@ jobs:
       - name: 🧩 Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # required so semantic-release can access tags
+          fetch-depth: 0  # required so semantic-release can access git tags
 
       # 🧰 Setup Node.js
       - name: 🧰 Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'pnpm'
 
-      # 🪄 Install pnpm
-      - name: 🪄 Install pnpm
-        run: npm install -g pnpm
+      # 🪄 Setup pnpm (preferred action)
+      - name: 🪄 Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
 
-      # 📦 Install dependencies (ignore frozen lockfile warning)
+      # 📦 Install dependencies
       - name: 📦 Install dependencies
         run: pnpm install --no-frozen-lockfile
 
       # 🧱 Install VSCE (Marketplace CLI)
       - name: 🧱 Install VSCE
-        run: npm install -g @vscode/vsce
+        run: pnpm add -g @vscode/vsce
 
-      # 🪄 Run Semantic Release
+      # 🚀 Run Semantic Release
       - name: 🚀 Run Semantic Release
         env:
-          # Use Personal Access Token (PAT) with write permission
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release --config release.json
 
-      # 🧩 Package the extension
+      # 📦 Package the extension
       - name: 📦 Package extension
         run: vsce package
 
-      # 🌐 Publish extension to VS Code Marketplace
-      - name: 🌐 Publish extension to VS Code Marketplace
+      # 🌐 Publish to VS Code Marketplace
+      - name: 🌐 Publish to VS Code Marketplace
         env:
           VSCE_PAT: ${{ secrets.VSCE_TOKEN }}
         run: vsce publish -p $VSCE_PAT
