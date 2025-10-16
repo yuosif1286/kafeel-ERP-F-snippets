@@ -1,5 +1,6 @@
 {
   "branches": ["master"],
+  "repositoryUrl": "https://github.com/yuosif1286/kafeel-ERP-F-snippets.git",
   "plugins": [
     [
       "@semantic-release/commit-analyzer",
