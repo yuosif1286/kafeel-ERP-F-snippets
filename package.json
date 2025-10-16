@@ -2,7 +2,7 @@
   "name": "alkafeel-erp-f-snippets",
   "displayName": "alkafeel-ERP-F-snippets",
   "description": "Custom AlKafeel Front End ERP  UI-Kit snippets",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "engines": {
     "vscode": "^1.105.0"
   },
@@ -43,7 +43,6 @@
     "@semantic-release/commit-analyzer": "^13.0.1",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^11.0.6",
-    "@semantic-release/npm": "^13.0.0",
     "@semantic-release/release-notes-generator": "^14.1.0",
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",

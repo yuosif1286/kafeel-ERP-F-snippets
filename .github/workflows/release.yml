@@ -1,49 +1,46 @@
-name: Release VS Code Extension
+name: 🚀 Release Extension
 
 on:
   push:
     branches:
       - master
-    paths:
-      - "package.json"
-      - "snippets/**"
-      - ".github/workflows/release.yml"
-
-permissions:
-  contents: write
 
 jobs:
   release:
     runs-on: ubuntu-latest
-
     steps:
       - name: 🧩 Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: 🧰 Setup Node.js
+      - name: 🧱 Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-
-      - name: 🪄 Install pnpm
-        run: npm install -g pnpm
+          cache: 'pnpm'
 
       - name: 📦 Install dependencies
-        run: pnpm install
+        run: |
+          corepack enable
+          pnpm install
 
-      - name: 🧱 Install VSCE (Marketplace publisher)
+      - name: ⚙️ Install VSCE CLI
         run: npm install -g @vscode/vsce
 
+      - name: 🧩 Verify pnpm presence (optional)
+        run: pnpm --version
+
       - name: 🚀 Run semantic release
+        id: semantic
         env:
-           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release --config release.json
- 
 
-      - name: 🧩 Package extension
-        run: vsce package
-
-      - name: 🌐 Publish extension to VS Code Marketplace
+      - name: 🧩 Package and publish extension
+        if: steps.semantic.outcome == 'success'
         env:
           VSCE_PAT: ${{ secrets.VSCE_TOKEN }}
-        run: vsce publish -p $VSCE_PAT
+        run: |
+          vsce package
+          vsce publish -p $VSCE_PAT
