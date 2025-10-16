@@ -10,7 +10,7 @@ on:
       - ".github/workflows/release.yml"
 
 permissions:
-  contents: write  # required for semantic-release to create tags and releases
+  contents: write  # needed for semantic-release to create tags/releases
 
 jobs:
   release:
@@ -21,16 +21,15 @@ jobs:
       - name: 🧩 Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # required so semantic-release can access git tags
+          fetch-depth: 0  # needed for semantic-release
 
       # 🧰 Setup Node.js
       - name: 🧰 Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'pnpm'
 
-      # 🪄 Setup pnpm (preferred action)
+      # 🪄 Setup pnpm
       - name: 🪄 Setup pnpm
         uses: pnpm/action-setup@v3
         with:
@@ -40,24 +39,18 @@ jobs:
       - name: 📦 Install dependencies
         run: pnpm install --no-frozen-lockfile
 
-      # 🧱 Install VSCE (Marketplace CLI)
+      # 🧱 Install VSCE
       - name: 🧱 Install VSCE
         run: pnpm add -g @vscode/vsce
 
-      # 🚀 Run Semantic Release
+      # 🚀 Run Semantic Release (for version/tag management only)
       - name: 🚀 Run Semantic Release
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release --config release.json
-
-      # 📦 Package the extension
-      - name: 📦 Package extension
-        run: vsce package
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # only GitHub token needed
+        run: npx semantic-release --ci --branches master --dry-run
 
       # 🌐 Publish to VS Code Marketplace
       - name: 🌐 Publish to VS Code Marketplace
         env:
-          VSCE_PAT: ${{ secrets.VSCE_TOKEN }}
+          VSCE_PAT: ${{ secrets.VSCE_TOKEN }}  # your VS Code PAT
         run: vsce publish -p $VSCE_PAT
