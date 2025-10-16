@@ -47,7 +47,7 @@ jobs:
       - name: 🚀 Run Semantic Release
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}  # only GitHub token needed
-        run: npx semantic-release --ci --branches master --dry-run
+        run: npx semantic-release --ci --branches master 
 
       # 🌐 Publish to VS Code Marketplace
       - name: 🌐 Publish to VS Code Marketplace
