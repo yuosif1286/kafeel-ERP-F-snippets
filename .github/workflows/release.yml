@@ -24,7 +24,7 @@ jobs:
         run: npm install -g pnpm
 
       - name: 📦 Install dependencies
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
 
       - name: ⚙️ Install VSCE CLI
         run: npm install -g @vscode/vsce
