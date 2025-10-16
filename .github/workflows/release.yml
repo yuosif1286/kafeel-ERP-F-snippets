@@ -8,6 +8,7 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+
     steps:
       - name: 🧩 Checkout repository
         uses: actions/checkout@v4
@@ -18,18 +19,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'pnpm'
+
+      - name: 📦 Install pnpm
+        run: npm install -g pnpm
 
       - name: 📦 Install dependencies
-        run: |
-          corepack enable
-          pnpm install
+        run: pnpm install
 
       - name: ⚙️ Install VSCE CLI
         run: npm install -g @vscode/vsce
-
-      - name: 🧩 Verify pnpm presence (optional)
-        run: pnpm --version
 
       - name: 🚀 Run semantic release
         id: semantic
@@ -37,7 +35,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release --config release.json
 
-      - name: 🧩 Package and publish extension
+      - name: 🌐 Package and publish extension
         if: steps.semantic.outcome == 'success'
         env:
           VSCE_PAT: ${{ secrets.VSCE_TOKEN }}
