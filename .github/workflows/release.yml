@@ -17,34 +17,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: 🧩 Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: 🧰 Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Install pnpm
+      - name: 🪄 Install pnpm
         run: npm install -g pnpm
 
-      - name: Install dependencies
+      - name: 📦 Install dependencies
         run: pnpm install
 
-      - name: Install @vscode/vsce globally
+      - name: 🧱 Install VSCE (Marketplace publisher)
         run: npm install -g @vscode/vsce
 
-      - name: Install semantic-release plugins
-        run: pnpm add -D semantic-release \
-          @semantic-release/changelog \
-          @semantic-release/git \
-          @semantic-release/npm \
-          @semantic-release/github \
-          @semantic-release/commit-analyzer \
-          @semantic-release/release-notes-generator
-
-      - name: Run semantic-release
+      - name: 🚀 Run semantic release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VSCE_PAT: ${{ secrets.VSCE_TOKEN }}
         run: npx semantic-release
+
+      - name: 🧩 Package extension
+        run: vsce package
+
+      - name: 🌐 Publish extension to VS Code Marketplace
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_TOKEN }}
+        run: vsce publish -p $VSCE_PAT
