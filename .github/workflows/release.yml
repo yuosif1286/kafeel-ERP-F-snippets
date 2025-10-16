@@ -1,44 +1,60 @@
-name: 🚀 Release Extension
+name: 🚀 Release VS Code Extension
 
 on:
   push:
     branches:
       - master
+    paths:
+      - "package.json"
+      - "snippets/**"
+      - ".github/workflows/release.yml"
+
+# Required for semantic-release to push commits/tags
+permissions:
+  contents: write
 
 jobs:
   release:
     runs-on: ubuntu-latest
 
     steps:
+      # 🧩 Checkout code
       - name: 🧩 Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0 # required so semantic-release can access tags
 
-      - name: 🧱 Setup Node.js
+      # 🧰 Setup Node.js
+      - name: 🧰 Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: 📦 Install pnpm
+      # 🪄 Install pnpm
+      - name: 🪄 Install pnpm
         run: npm install -g pnpm
 
+      # 📦 Install dependencies (ignore frozen lockfile warning)
       - name: 📦 Install dependencies
         run: pnpm install --no-frozen-lockfile
 
-      - name: ⚙️ Install VSCE CLI
+      # 🧱 Install VSCE (Marketplace CLI)
+      - name: 🧱 Install VSCE
         run: npm install -g @vscode/vsce
 
-      - name: 🚀 Run semantic release
-        id: semantic
+      # 🪄 Run Semantic Release
+      - name: 🚀 Run Semantic Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Use Personal Access Token (PAT) with write permission
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: npx semantic-release --config release.json
 
-      - name: 🌐 Package and publish extension
-        if: steps.semantic.outcome == 'success'
+      # 🧩 Package the extension
+      - name: 📦 Package extension
+        run: vsce package
+
+      # 🌐 Publish extension to VS Code Marketplace
+      - name: 🌐 Publish extension to VS Code Marketplace
         env:
           VSCE_PAT: ${{ secrets.VSCE_TOKEN }}
-        run: |
-          vsce package
-          vsce publish -p $VSCE_PAT
+        run: vsce publish -p $VSCE_PAT
