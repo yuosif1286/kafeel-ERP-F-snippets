@@ -51,10 +51,11 @@ jobs:
           fetch-depth: 0   # 👈 important, fetches full history
 
       # 🚀 Run Semantic Release (for version/tag management only)
-      - name: 🚀 Run Semantic Release
+      - name: Run Semantic Release
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # only GitHub token needed
-        run: npx semantic-release 
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: ./node_modules/.bin/semantic-release
+
 
       # 🌐 Publish to VS Code Marketplace
       - name: 🌐 Publish to VS Code Marketplace
