@@ -39,7 +39,7 @@
   },
 "release": {
   "branches": [
-    "main",
+    "master",
     {
       "name": "alpha",
       "prerelease": true
@@ -49,6 +49,7 @@
       "prerelease": true
     }
   ],
+    "repositoryUrl": "git@github.com:yuosif1286/kafeel-ERP-F-snippets.git",
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
