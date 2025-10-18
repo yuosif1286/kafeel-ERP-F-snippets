@@ -89,6 +89,12 @@
           "tarballDir": "dist"
         }
       ],
+        [
+          "@semantic-release/changelog",
+          {
+            "changelogFile": "CHANGELOG.md"
+          }
+        ],
       [
         "@semantic-release/git",
         {
