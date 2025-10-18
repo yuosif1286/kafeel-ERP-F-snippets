@@ -37,7 +37,7 @@
     "type": "git",
     "url": "https://github.com/yuosif1286/kafeel-ERP-F-snippets.git"
   },
-"release": {
+"release":{
   "branches": [
     "master",
     {
@@ -49,11 +49,25 @@
       "prerelease": true
     }
   ],
-    "repositoryUrl": "git@github.com:yuosif1286/kafeel-ERP-F-snippets.git",
+  "repositoryUrl": "git@github.com:yuosif1286/kafeel-ERP-F-snippets.git",
   "plugins": [
-    "@semantic-release/commit-analyzer",
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        "preset": "angular",
+        "releaseRules": [
+          { "type": "feat", "release": "minor" },
+          { "type": "fix", "release": "patch" },
+          { "type": "chore", "release": "patch" },
+          { "type": "docs", "release": "patch" }
+        ],
+        "parserOpts": {
+          "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES"]
+        }
+      }
+    ],
     "@semantic-release/release-notes-generator",
-   [
+    [
       "@semantic-release/npm",
       {
         "npmPublish": false,
@@ -68,8 +82,7 @@
       }
     ]
   ]
-}
-,
+},
 "dependencies": {
   "@semantic-release/changelog": "^6.0.3",
   "@semantic-release/commit-analyzer": "^13.0.1",
