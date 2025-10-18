@@ -55,7 +55,8 @@ jobs:
       #   env:
       #     GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       #   run: pnpm dlx semantic-release
-
+      - name: Install dependencies
+        run: npm ci
 
       # 🌐 Publish to VS Code Marketplace
       - name: 🌐 Publish to VS Code Marketplace
