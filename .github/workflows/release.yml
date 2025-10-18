@@ -35,8 +35,9 @@ jobs:
         with:
           version: 9
 
-      - name: 📦 Install dependencies 
-        run: pnpm install
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+
 
 
       # 🧱 Install VSCE
