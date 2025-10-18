@@ -43,6 +43,12 @@ jobs:
       - name: 🧱 Install VSCE
         run: pnpm add -g @vscode/vsce
 
+      - name: Checkout repository
+        uses: actions/checkout@v4
+         
+        with:
+          fetch-depth: 0   # 👈 important, fetches full history
+
       # 🚀 Run Semantic Release (for version/tag management only)
       - name: 🚀 Run Semantic Release
         env:
