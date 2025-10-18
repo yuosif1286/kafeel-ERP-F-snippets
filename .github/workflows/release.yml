@@ -50,11 +50,11 @@ jobs:
         with:
           fetch-depth: 0   # 👈 important, fetches full history
 
-      # 🚀 Run Semantic Release (for version/tag management only)
-      - name: Run Semantic Release
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: pnpm dlx semantic-release
+      # # 🚀 Run Semantic Release (for version/tag management only)
+      # - name: Run Semantic Release
+      #   env:
+      #     GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   run: pnpm dlx semantic-release
 
 
       # 🌐 Publish to VS Code Marketplace
