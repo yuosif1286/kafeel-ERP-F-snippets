@@ -2,7 +2,7 @@
   "name": "alkafeel-erp-f-snippets",
   "displayName": "alkafeel-ERP-F-snippets",
   "description": "Custom AlKafeel Front End ERP  UI-Kit snippets",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "engines": {
     "vscode": "^1.105.0"
   },
