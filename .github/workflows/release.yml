@@ -54,7 +54,7 @@ jobs:
       - name: Run Semantic Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: ./node_modules/.bin/semantic-release
+        run: pnpm dlx semantic-release
 
 
       # 🌐 Publish to VS Code Marketplace
