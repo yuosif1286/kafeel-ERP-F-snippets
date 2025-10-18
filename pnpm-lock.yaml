@@ -7,28 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      '@semantic-release/changelog':
-        specifier: ^6.0.3
-        version: 6.0.3(semantic-release@25.0.0(typescript@5.9.3))
-      '@semantic-release/commit-analyzer':
-        specifier: ^13.0.1
-        version: 13.0.1(semantic-release@25.0.0(typescript@5.9.3))
-      '@semantic-release/git':
-        specifier: ^10.0.1
-        version: 10.0.1(semantic-release@25.0.0(typescript@5.9.3))
-      '@semantic-release/github':
-        specifier: ^11.0.6
-        version: 11.0.6(semantic-release@25.0.0(typescript@5.9.3))
-      '@semantic-release/npm':
-        specifier: ^12.0.2
-        version: 12.0.2(semantic-release@25.0.0(typescript@5.9.3))
-      '@semantic-release/release-notes-generator':
-        specifier: ^14.1.0
-        version: 14.1.0(semantic-release@25.0.0(typescript@5.9.3))
-      semantic-release:
-        specifier: ^25.0.0
-        version: 25.0.0(typescript@5.9.3)
     devDependencies:
       '@commitlint/cli':
         specifier: ^20.1.0
@@ -36,6 +14,24 @@ importers:
       '@commitlint/config-conventional':
         specifier: ^20.0.0
         version: 20.0.0
+      '@semantic-release/changelog':
+        specifier: '6'
+        version: 6.0.3(semantic-release@25.0.0(typescript@5.9.3))
+      '@semantic-release/commit-analyzer':
+        specifier: '13'
+        version: 13.0.1(semantic-release@25.0.0(typescript@5.9.3))
+      '@semantic-release/git':
+        specifier: '10'
+        version: 10.0.1(semantic-release@25.0.0(typescript@5.9.3))
+      '@semantic-release/github':
+        specifier: ^11.0.6
+        version: 11.0.6(semantic-release@25.0.0(typescript@5.9.3))
+      '@semantic-release/npm':
+        specifier: '12'
+        version: 12.0.2(semantic-release@25.0.0(typescript@5.9.3))
+      '@semantic-release/release-notes-generator':
+        specifier: '14'
+        version: 14.1.0(semantic-release@25.0.0(typescript@5.9.3))
       commitizen:
         specifier: ^4.3.1
         version: 4.3.1(@types/node@24.8.1)(typescript@5.9.3)
@@ -45,6 +41,9 @@ importers:
       husky:
         specifier: ^9.1.7
         version: 9.1.7
+      semantic-release:
+        specifier: '25'
+        version: 25.0.0(typescript@5.9.3)
 
 packages:
 
