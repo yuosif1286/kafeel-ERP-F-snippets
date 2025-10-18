@@ -35,9 +35,9 @@ jobs:
         with:
           version: 9
 
-      # 📦 Install dependencies
-      - name: 📦 Install dependencies
-        run: pnpm install --no-frozen-lockfile
+      - name: 📦 Install dependencies (including dev)
+        run: pnpm install --no-frozen-lockfile --include=dev
+
 
       # 🧱 Install VSCE
       - name: 🧱 Install VSCE
@@ -53,7 +53,7 @@ jobs:
       - name: 🚀 Run Semantic Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # only GitHub token needed
-        run: npx semantic-release --ci --branches master 
+        run: npx semantic-release 
 
       # 🌐 Publish to VS Code Marketplace
       - name: 🌐 Publish to VS Code Marketplace
