@@ -2,11 +2,11 @@
   "name": "alkafeel-erp-f-snippets",
   "displayName": "alkafeel-ERP-F-snippets",
   "description": "Custom AlKafeel Front End ERP  UI-Kit snippets",
-  "version": "1.0.3",
+  "version": "1.0.2",
   "engines": {
     "vscode": "^1.105.0"
   },
-  "private":true,
+  "private": true,
   "scripts": {
     "commit": "cz",
     "prepare": "husky install",
@@ -37,65 +37,82 @@
     "type": "git",
     "url": "https://github.com/yuosif1286/kafeel-ERP-F-snippets.git"
   },
-"release":{
-  "branches": [
-    "master",
-    {
-      "name": "alpha",
-      "prerelease": true
-    },
-    {
-      "name": "beta",
-      "prerelease": true
-    }
-  ],
-  "repositoryUrl": "git@github.com:yuosif1286/kafeel-ERP-F-snippets.git",
-  "plugins": [
-    [
-      "@semantic-release/commit-analyzer",
+  "release": {
+    "branches": [
+      "master",
       {
-        "preset": "angular",
-        "releaseRules": [
-          { "type": "feat", "release": "minor" },
-          { "type": "fix", "release": "patch" },
-          { "type": "chore", "release": "patch" },
-          { "type": "docs", "release": "patch" }
-        ],
-        "parserOpts": {
-          "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES"]
+        "name": "alpha",
+        "prerelease": true
+      },
+      {
+        "name": "beta",
+        "prerelease": true
+      }
+    ],
+    "repositoryUrl": "git@github.com:yuosif1286/kafeel-ERP-F-snippets.git",
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "preset": "angular",
+          "releaseRules": [
+            {
+              "type": "feat",
+              "release": "minor"
+            },
+            {
+              "type": "fix",
+              "release": "patch"
+            },
+            {
+              "type": "chore",
+              "release": "patch"
+            },
+            {
+              "type": "docs",
+              "release": "patch"
+            }
+          ],
+          "parserOpts": {
+            "noteKeywords": [
+              "BREAKING CHANGE",
+              "BREAKING CHANGES"
+            ]
+          }
         }
-      }
-    ],
-    "@semantic-release/release-notes-generator",
-    [
-      "@semantic-release/npm",
-      {
-        "npmPublish": false,
-        "tarballDir": "dist"
-      }
-    ],
-    [
-      "@semantic-release/git",
-      {
-        "assets": ["package.json", "CHANGELOG.md"],
-        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-      }
+      ],
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false,
+          "tarballDir": "dist"
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "CHANGELOG.md"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
     ]
-  ]
-},
-"dependencies": {
-  "@semantic-release/changelog": "^6.0.3",
-  "@semantic-release/commit-analyzer": "^13.0.1",
-  "@semantic-release/git": "^10.0.1",
-  "@semantic-release/github": "^11.0.6",
-  "@semantic-release/npm": "^12.0.2",
-  "@semantic-release/release-notes-generator": "^14.1.0",
-  "semantic-release": "^25.0.0"
-},
+  },
+  "dependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.6",
+    "@semantic-release/npm": "^12.0.2",
+    "@semantic-release/release-notes-generator": "^14.1.0",
+    "semantic-release": "^25.0.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
- 
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^9.1.7"
