@@ -35,8 +35,8 @@ jobs:
         with:
           version: 9
 
-      - name: 📦 Install dependencies (including dev)
-        run: pnpm install --include=dev --no-lockfile=false
+      - name: 📦 Install dependencies 
+        run: pnpm install
 
 
       # 🧱 Install VSCE
