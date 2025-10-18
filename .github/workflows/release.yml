@@ -45,4 +45,4 @@ jobs:
 
       # 🚀 Publish VS Code extension
       - name: Publish VS Code extension
-        run: vsce publish -p $VSCE_PAT
+        run: vsce publish -p ${{ secrets.VSCE_TOKEN }}
