@@ -35,19 +35,14 @@ jobs:
         with:
           version: 9
 
+      # 📦 Install dependencies (including devDependencies)
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
-
-
-      # 🧱 Install VSCE
+      # 🧱 Install VSCE globally
       - name: 🧱 Install VSCE
         run: pnpm add -g @vscode/vsce
 
-
-
-      # 🌐 Publish to VS Code Marketplace
-      - name: 🌐 Publish to VS Code Marketplace
-        env:
-          VSCE_PAT: ${{ secrets.VSCE_TOKEN }}  # your VS Code PAT
+      # 🚀 Publish VS Code extension
+      - name: Publish VS Code extension
         run: vsce publish -p $VSCE_PAT
