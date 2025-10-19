@@ -1,1 +1,16 @@
+# [1.2.0](https://github.com/yuosif1286/kafeel-ERP-F-snippets/compare/v1.1.3...v1.2.0) (2025-10-19)
+
+
+### Bug Fixes
+
+* configur husky ([466667f](https://github.com/yuosif1286/kafeel-ERP-F-snippets/commit/466667fa82838e8ee8c96f58082133df19ae2961))
+* fix ([b538616](https://github.com/yuosif1286/kafeel-ERP-F-snippets/commit/b5386164034d4dda0d2e8abb3055d33dcc1e0f0c))
+* fix ([9fe96b1](https://github.com/yuosif1286/kafeel-ERP-F-snippets/commit/9fe96b10b1c7aedf4e5a2ef7574bcd5dd04cff40))
+
+
+### Features
+
+* add change log ([8c3925f](https://github.com/yuosif1286/kafeel-ERP-F-snippets/commit/8c3925f7cc55e1e89aa0d2726999221db96814c4))
+* any ([a4e634c](https://github.com/yuosif1286/kafeel-ERP-F-snippets/commit/a4e634c6fbf29553f5dff2a2984ce913f3f898b6))
+
 ## [1.1.3](https://github.com/yuosif1286/kafeel-ERP-F-snippets/compare/v1.1.2...v1.1.3) (2025-10-18)
