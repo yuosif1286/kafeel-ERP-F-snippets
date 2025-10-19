@@ -9,6 +9,7 @@
   "private": true,
   "scripts": {
     "commit": "cz",
+    "test": "echo \"No tests for this project\"",
     "prepare": "husky",
     "release": "semantic-release"
   },
