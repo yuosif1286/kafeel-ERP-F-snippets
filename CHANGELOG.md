@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/yuosif1286/kafeel-ERP-F-snippets/compare/v1.4.0...v1.5.0) (2025-10-19)
+
+
+### Features
+
+* git action with release after push to master branch ([e2a25cf](https://github.com/yuosif1286/kafeel-ERP-F-snippets/commit/e2a25cf0b5f570b0c5959e2889350af14b469e43))
+
 # [1.4.0](https://github.com/yuosif1286/kafeel-ERP-F-snippets/compare/v1.3.0...v1.4.0) (2025-10-19)
 
 
