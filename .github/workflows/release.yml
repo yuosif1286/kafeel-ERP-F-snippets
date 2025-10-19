@@ -10,39 +10,37 @@ on:
       - ".github/workflows/release.yml"
 
 permissions:
-  contents: write  # needed for semantic-release to create tags/releases
+  contents: write
 
 jobs:
   release:
     runs-on: ubuntu-latest
-
     steps:
-      # 🧩 Checkout code
       - name: 🧩 Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # needed for semantic-release
+          fetch-depth: 0
 
-      # 🧰 Setup Node.js
       - name: 🧰 Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 24
 
-      # 🪄 Setup pnpm
       - name: 🪄 Setup pnpm
         uses: pnpm/action-setup@v3
         with:
           version: 9
 
-      # 📦 Install dependencies (including devDependencies)
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
-      # 🧱 Install VSCE globally
       - name: 🧱 Install VSCE
         run: pnpm add -g @vscode/vsce
 
-      # 🚀 Publish VS Code extension
-      - name: Publish VS Code extension
+      - name: 🔖 Run Semantic Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release
+
+      - name: 🚀 Publish VS Code extension
         run: vsce publish -p ${{ secrets.VSCE_TOKEN }}
