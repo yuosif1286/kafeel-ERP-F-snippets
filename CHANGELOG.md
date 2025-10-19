@@ -1,3 +1,15 @@
+# [1.4.0](https://github.com/yuosif1286/kafeel-ERP-F-snippets/compare/v1.3.0...v1.4.0) (2025-10-19)
+
+
+### Bug Fixes
+
+* used pnpm test ([d9281c7](https://github.com/yuosif1286/kafeel-ERP-F-snippets/commit/d9281c7b97910427143bbb81803c8168cd3364f1))
+
+
+### Features
+
+* this for add pnpm reun test ([df9733f](https://github.com/yuosif1286/kafeel-ERP-F-snippets/commit/df9733fdaf21febbd6984886770963c7a2201956))
+
 # [1.3.0](https://github.com/yuosif1286/kafeel-ERP-F-snippets/compare/v1.2.0...v1.3.0) (2025-10-19)
 
 
