@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/yuosif1286/kafeel-ERP-F-snippets/compare/v1.2.0...v1.3.0) (2025-10-19)
+
+
+### Features
+
+* add husky pre-commit ([7e6368d](https://github.com/yuosif1286/kafeel-ERP-F-snippets/commit/7e6368d175da34883444776341628525a02e82f5))
+
 # [1.2.0](https://github.com/yuosif1286/kafeel-ERP-F-snippets/compare/v1.1.3...v1.2.0) (2025-10-19)
 
 
