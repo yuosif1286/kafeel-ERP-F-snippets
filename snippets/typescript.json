@@ -109,5 +109,20 @@
             "});"
         ],
         "description": "this example to used defineModel"
+    },
+        "this for confirm is valid Form ": {
+        "prefix": "is-valid-form",
+        "body": [
+            "if(!(await isValidForm(form)))",
+            "\t\treturn;"
+        ],
+        "description": "this usage to confirm if the form is valid"
+    },
+        "this to get enum key  and value as list ": {
+        "prefix": "enum-get-name-and-value",
+        "body": [
+            "const animalSpeciesList = EnumHelpers.getNamesAndValues(AnimalSpecies)"
+        ],
+        "description": "this to get  name and value as  array of oobject from enum type"
     }
 }

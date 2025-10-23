@@ -72,5 +72,13 @@
             "\t</KFDialogWithDiscard>"
         ],
         "description": "this  example to usage case KFDialogWithDiscard component"
+    },
+        "usage case app select component": {
+        "prefix": "kf-u-app-select",
+        "body": [
+            " <AppSelect v-model=\"pet.foodBrandId\" :items=\"foodBrands||[]\" item-title=\"name\" item-value=\"id\"",
+            "\t\t\t\t\t\t\t\tlabel=\"Food Brand\"  :rules=\"requiredValidator(pet.foodBrandId,t).value\"/>"
+        ],
+        "description": "this  for uasge case AppSelect Components"
     }
 }
