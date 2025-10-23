@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/yuosif1286/kafeel-ERP-F-snippets/compare/v1.5.0...v1.6.0) (2025-10-23)
+
+
+### Features
+
+* **html.json and typescript.json:** add new snippets for AppSelect  and Enumhelper and isvalidForm ([4da5193](https://github.com/yuosif1286/kafeel-ERP-F-snippets/commit/4da519385abc326493394ed780101b4f2f9ae90b))
+
 # [1.5.0](https://github.com/yuosif1286/kafeel-ERP-F-snippets/compare/v1.4.0...v1.5.0) (2025-10-19)
 
 
