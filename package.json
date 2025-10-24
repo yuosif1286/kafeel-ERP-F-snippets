@@ -134,8 +134,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "dependencies": {
-    "vue": "^3.5.22"
   }
 }
