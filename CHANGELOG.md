@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/yuosif1286/kafeel-ERP-F-snippets/compare/v1.6.0...v1.7.0) (2025-10-24)
+
+
+### Features
+
+* **docs:** create new docs and guid ([bbf296e](https://github.com/yuosif1286/kafeel-ERP-F-snippets/commit/bbf296e08b49ff902ea559e130b9d3e99ba2e86e))
+
 # [1.6.0](https://github.com/yuosif1286/kafeel-ERP-F-snippets/compare/v1.5.0...v1.6.0) (2025-10-23)
 
 
