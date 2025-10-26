@@ -1,5 +1,5 @@
-<template><div><h1 id="marketplace-snippets" tabindex="-1"><a class="header-anchor" href="#marketplace-snippets"><span>Marketplace Snippets</span></a></h1>
-<p>Welcome to the documentation!</p>
+<template><div><h1 id="hello-vuepress" tabindex="-1"><a class="header-anchor" href="#hello-vuepress"><span>Hello VuePress</span></a></h1>
+<p>this test guid to create vuePress v2</p>
 </div></template>
 
 

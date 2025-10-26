@@ -4,3 +4,6 @@ node_modules
 pnpm-lock.yaml
 pnpm-lock.yaml
 pnpm-lock.yaml
+docs/.vuepress/dist
+docs/.vuepress/.temp
+docs/.vuepress/.temp
