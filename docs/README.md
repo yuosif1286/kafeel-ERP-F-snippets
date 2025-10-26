@@ -1,3 +1,1 @@
-# Marketplace Snippets
-
-Welcome to the documentation!
+# Hello VuePress
