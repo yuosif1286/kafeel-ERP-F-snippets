@@ -1,10 +1,10 @@
 name: docs
 
 on:
-  # trigger deployment on every push to main branch
+  # Deploy every push to the main branch
   push:
     branches: [master]
-  # trigger deployment manually
+  # Allow manual trigger from GitHub UI
   workflow_dispatch:
 
 jobs:
@@ -12,38 +12,38 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      # 1️⃣ Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
-          # fetch all commits to get last updated time or other git log info
-          fetch-depth: 0
+          fetch-depth: 0 # fetch all commits for git log info
 
+      # 2️⃣ Setup pnpm
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
+        with:
+          version: 9 # 👈 use the same version you use locally (check with `pnpm -v`)
 
+      # 3️⃣ Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          # choose node.js version to use
-          node-version: 22
-          # cache deps for pnpm
-          cache: pnpm
+          node-version: 22 # you can adjust this if needed
+          cache: 'pnpm' # cache dependencies for pnpm
 
-      - name: Install deps
+      # 4️⃣ Install dependencies
+      - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      # run build script
+      # 5️⃣ Build the VuePress documentation
       - name: Build VuePress site
         run: pnpm docs:build
 
-      # please check out the docs of the workflow for more details
-      # @see https://github.com/crazy-max/ghaction-github-pages
+      # 6️⃣ Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4
         with:
-          # deploy to gh-pages branch
-          target_branch: gh-pages
-          # deploy the default output dir of VuePress
-          build_dir: docs/.vuepress/dist
+          target_branch: gh-pages # branch to deploy to
+          build_dir: docs/.vuepress/dist # VuePress output folder
         env:
-          # @see https://docs.github.com/en/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

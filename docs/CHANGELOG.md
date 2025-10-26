@@ -1,3 +1,17 @@
+## [1.7.1](https://github.com/yuosif1286/kafeel-ERP-F-snippets/compare/v1.7.0...v1.7.1) (2025-10-24)
+
+
+### Bug Fixes
+
+* align vue and vuepress versions ([338c207](https://github.com/yuosif1286/kafeel-ERP-F-snippets/commit/338c207e2435a10cb3456a195dccede3a462f57b))
+
+# [1.7.0](https://github.com/yuosif1286/kafeel-ERP-F-snippets/compare/v1.6.0...v1.7.0) (2025-10-24)
+
+
+### Features
+
+* **docs:** create new docs and guid ([bbf296e](https://github.com/yuosif1286/kafeel-ERP-F-snippets/commit/bbf296e08b49ff902ea559e130b9d3e99ba2e86e))
+
 # [1.6.0](https://github.com/yuosif1286/kafeel-ERP-F-snippets/compare/v1.5.0...v1.6.0) (2025-10-23)
 
 
