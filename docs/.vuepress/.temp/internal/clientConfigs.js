@@ -9,6 +9,7 @@ import * as clientConfig7 from '/home/yoyo/Documents/GitHub/kafeel-ERP-F-snippet
 import * as clientConfig8 from '/home/yoyo/Documents/GitHub/kafeel-ERP-F-snippets/docs/.vuepress/.temp/markdown-tab/config.js'
 import * as clientConfig9 from '/home/yoyo/Documents/GitHub/kafeel-ERP-F-snippets/node_modules/.pnpm/@vuepress+plugin-theme-data@2.0.0-rc.114_typescript@5.9.3_vuepress@2.0.0-rc.24_@vuepres_40545d02cc2403737d6f94604a9a510b/node_modules/@vuepress/plugin-theme-data/lib/client/config.js'
 import * as clientConfig10 from '/home/yoyo/Documents/GitHub/kafeel-ERP-F-snippets/node_modules/.pnpm/@vuepress+theme-default@2.0.0-rc.115_markdown-it@14.1.0_sass@1.93.2_typescript@5.9.3_vu_cfa8de47e2d10ac43efcc71fc366b5a9/node_modules/@vuepress/theme-default/lib/client/config.js'
+import * as clientConfig11 from '/home/yoyo/Documents/GitHub/kafeel-ERP-F-snippets/docs/.vuepress/.temp/markdown-chart/config.js'
 
 export const clientConfigs = [
   clientConfig0,
@@ -22,4 +23,5 @@ export const clientConfigs = [
   clientConfig8,
   clientConfig9,
   clientConfig10,
+  clientConfig11,
 ].map((m) => m.default).filter(Boolean)

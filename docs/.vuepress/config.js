@@ -1,6 +1,7 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
+import { markdownChartPlugin } from '@vuepress/plugin-markdown-chart'
 
 export default defineUserConfig({
   bundler: viteBundler(),
@@ -19,4 +20,9 @@ export default defineUserConfig({
   lang: 'en-US',
   title: 'Hello VuePress',
   description: 'Just playing around',
+  plugins:[
+     markdownChartPlugin({
+      mermaid: true,
+    }), 
+  ]
 })
