@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/yuosif1286/kafeel-ERP-F-snippets/compare/v1.8.0...v1.9.0) (2025-11-06)
+
+
+### Features
+
+* add snippet for post - delete - get ([eea7b52](https://github.com/yuosif1286/kafeel-ERP-F-snippets/commit/eea7b52d56511affda33819687ace23705896b94))
+
 # [1.8.0](https://github.com/yuosif1286/kafeel-ERP-F-snippets/compare/v1.7.2...v1.8.0) (2025-11-06)
 
 
