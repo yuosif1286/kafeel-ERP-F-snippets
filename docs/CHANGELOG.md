@@ -1,3 +1,5 @@
+## [1.9.1](https://github.com/yuosif1286/kafeel-ERP-F-snippets/compare/v1.9.0...v1.9.1) (2025-11-11)
+
 # [1.9.0](https://github.com/yuosif1286/kafeel-ERP-F-snippets/compare/v1.8.0...v1.9.0) (2025-11-06)
 
 
