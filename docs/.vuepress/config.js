@@ -7,8 +7,12 @@ import { searchPlugin } from '@vuepress/plugin-search'
 
 export default defineUserConfig({
   bundler: viteBundler(),
+  router:{
+    history: 'hash',
+  },
   title: 'Kaffeel Snippets for ERP-F',
   description: 'Awesome docs!',
+  base: '/kafeel-ERP-F-snippets/',
   theme: hopeTheme({
     navbar: [
       { text: 'Home', link: '/' },
