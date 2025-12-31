@@ -120,18 +120,23 @@
     "@semantic-release/github": "^11.0.6",
     "@semantic-release/npm": "12",
     "@semantic-release/release-notes-generator": "14",
-    "@vuepress/bundler-vite": "2.0.0-rc.24",
+    "@vuepress/bundler-vite": "2.0.0-rc.26",
+    "@vuepress/plugin-back-to-top": "2.0.0-rc.24",
     "@vuepress/plugin-markdown-chart": "2.0.0-rc.109",
+    "@vuepress/plugin-markdown-tab": "2.0.0-rc.121",
     "@vuepress/theme-default": "2.0.0-rc.115",
     "@vueuse/core": "^13.9.0",
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^9.1.7",
+    "mermaid": "^11.12.2",
     "sass": "^1.93.2",
     "semantic-release": "25",
     "vue": "^3.5.22",
     "vue-router": "^4.6.3",
-    "vuepress": "2.0.0-rc.24"
+    "vuepress": "2.0.0-rc.24",
+    "vuepress-plugin-md-enhance": "2.0.0-rc.101",
+    "vuepress-theme-hope": "2.0.0-rc.94"
   },
   "config": {
     "commitizen": {
