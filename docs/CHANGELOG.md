@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/yuosif1286/kafeel-ERP-F-snippets/compare/v1.9.1...v1.10.0) (2025-12-31)
+
+
+### Features
+
+* using new them vuepress hope ([ec9d566](https://github.com/yuosif1286/kafeel-ERP-F-snippets/commit/ec9d566e25ea1461716dc180eab2b71d09e9de44))
+
 ## [1.9.1](https://github.com/yuosif1286/kafeel-ERP-F-snippets/compare/v1.9.0...v1.9.1) (2025-11-11)
 
 # [1.9.0](https://github.com/yuosif1286/kafeel-ERP-F-snippets/compare/v1.8.0...v1.9.0) (2025-11-06)
