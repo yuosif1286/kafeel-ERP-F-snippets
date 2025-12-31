@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/yuosif1286/kafeel-ERP-F-snippets/compare/v1.10.0...v1.11.0) (2025-12-31)
+
+
+### Features
+
+* update ([70432c6](https://github.com/yuosif1286/kafeel-ERP-F-snippets/commit/70432c65c020ecd779d088aa9acaaaa43d58e2fb))
+
 # [1.10.0](https://github.com/yuosif1286/kafeel-ERP-F-snippets/compare/v1.9.1...v1.10.0) (2025-12-31)
 
 
