@@ -1,7 +1,7 @@
 export const redirects = JSON.parse("{}")
 
 export const routes = Object.fromEntries([
-  ["/CHANGELOG.html", { loader: () => import(/* webpackChunkName: "CHANGELOG.html" */"/home/yoyo/Documents/GitHub/kafeel-ERP-F-snippets/docs/.vuepress/.temp/pages/CHANGELOG.html.js"), meta: {"title":"1.9.0 (2025-11-06)"} }],
+  ["/CHANGELOG.html", { loader: () => import(/* webpackChunkName: "CHANGELOG.html" */"/home/yoyo/Documents/GitHub/kafeel-ERP-F-snippets/docs/.vuepress/.temp/pages/CHANGELOG.html.js"), meta: {"title":"1.10.0 (2025-12-31)"} }],
   ["/", { loader: () => import(/* webpackChunkName: "index.html" */"/home/yoyo/Documents/GitHub/kafeel-ERP-F-snippets/docs/.vuepress/.temp/pages/index.html.js"), meta: {"title":"Hello VuePress"} }],
   ["/guide/", { loader: () => import(/* webpackChunkName: "guide_index.html" */"/home/yoyo/Documents/GitHub/kafeel-ERP-F-snippets/docs/.vuepress/.temp/pages/guide/index.html.js"), meta: {"title":"Guide"} }],
   ["/404.html", { loader: () => import(/* webpackChunkName: "404.html" */"/home/yoyo/Documents/GitHub/kafeel-ERP-F-snippets/docs/.vuepress/.temp/pages/404.html.js"), meta: {"title":""} }],
