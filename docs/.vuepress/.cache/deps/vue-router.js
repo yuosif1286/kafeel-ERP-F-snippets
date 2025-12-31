@@ -16,7 +16,7 @@ import {
   unref,
   watch,
   watchEffect
-} from "./chunk-7KJEB22P.js";
+} from "./chunk-T2ZTTVBS.js";
 
 // node_modules/.pnpm/@vue+devtools-api@6.6.4/node_modules/@vue/devtools-api/lib/esm/env.js
 function getDevtoolsGlobalHook() {
@@ -176,7 +176,7 @@ function setupDevtoolsPlugin(pluginDescriptor, setupFn) {
   }
 }
 
-// node_modules/.pnpm/vue-router@4.6.3_vue@3.5.22_typescript@5.9.3_/node_modules/vue-router/dist/devtools-BLCumUwL.mjs
+// node_modules/.pnpm/vue-router@4.6.4_vue@3.5.26_typescript@5.9.3_/node_modules/vue-router/dist/devtools-EWN81iOl.mjs
 var isBrowser = typeof document !== "undefined";
 function isRouteComponent(component) {
   return typeof component === "object" || "displayName" in component || "props" in component || "__vccOpts" in component;
@@ -288,11 +288,11 @@ function isSameRouteRecord(a, b) {
 }
 function isSameRouteLocationParams(a, b) {
   if (Object.keys(a).length !== Object.keys(b).length) return false;
-  for (const key in a) if (!isSameRouteLocationParamsValue(a[key], b[key])) return false;
+  for (var key in a) if (!isSameRouteLocationParamsValue(a[key], b[key])) return false;
   return true;
 }
 function isSameRouteLocationParamsValue(a, b) {
-  return isArray(a) ? isEquivalentArray(a, b) : isArray(b) ? isEquivalentArray(b, a) : a === b;
+  return isArray(a) ? isEquivalentArray(a, b) : isArray(b) ? isEquivalentArray(b, a) : a?.valueOf() === b?.valueOf();
 }
 function isEquivalentArray(a, b) {
   return isArray(b) ? a.length === b.length && a.every((value, i) => value === b[i]) : a.length === 1 && a[0] === b;
@@ -1026,7 +1026,7 @@ function omit(obj, keys) {
   return ret;
 }
 
-// node_modules/.pnpm/vue-router@4.6.3_vue@3.5.22_typescript@5.9.3_/node_modules/vue-router/dist/vue-router.mjs
+// node_modules/.pnpm/vue-router@4.6.4_vue@3.5.26_typescript@5.9.3_/node_modules/vue-router/dist/vue-router.mjs
 var createBaseLocation = () => location.protocol + "//" + location.host;
 function createCurrentLocation(base, location$1) {
   const { pathname, search, hash } = location$1;
@@ -1877,7 +1877,7 @@ function includesParams(outer, inner) {
     const outerValue = outer[key];
     if (typeof innerValue === "string") {
       if (innerValue !== outerValue) return false;
-    } else if (!isArray(outerValue) || outerValue.length !== innerValue.length || innerValue.some((value, i) => value !== outerValue[i])) return false;
+    } else if (!isArray(outerValue) || outerValue.length !== innerValue.length || innerValue.some((value, i) => value.valueOf() !== outerValue[i].valueOf())) return false;
   }
   return true;
 }
@@ -2357,9 +2357,6 @@ function useRouter() {
 function useRoute(_name) {
   return inject(routeLocationKey);
 }
-
-// node_modules/.pnpm/vue-router@4.6.3_vue@3.5.22_typescript@5.9.3_/node_modules/vue-router/dist/vue-router.esm-bundler.js
-console.warn("[vue-router]: importing from 'vue-router/dist/vue-router.esm-bundler.js' is deprecated. Use 'vue-router' directly.");
 export {
   NavigationFailureType,
   RouterLink,
@@ -2387,10 +2384,10 @@ export {
 };
 /*! Bundled license information:
 
-vue-router/dist/devtools-BLCumUwL.mjs:
+vue-router/dist/devtools-EWN81iOl.mjs:
 vue-router/dist/vue-router.mjs:
   (*!
-   * vue-router v4.6.3
+   * vue-router v4.6.4
    * (c) 2025 Eduardo San Martin Morote
    * @license MIT
    *)

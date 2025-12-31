@@ -7,3 +7,9 @@ pnpm-lock.yaml
 docs/.vuepress/dist
 docs/.vuepress/.temp
 docs/.vuepress/.temp
+pnpm-lock.yaml
+docs/.vuepress/.cache/deps/@vue_devtools-api.js
+.vscode/settings.json
+docs/.vuepress/.cache/deps/@vue_devtools-api.js
+docs/.vuepress/.cache/deps/@vue_devtools-api.js.map
+/docs/.vuepress/.cache

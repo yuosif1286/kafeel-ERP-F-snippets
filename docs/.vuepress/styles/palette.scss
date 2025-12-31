@@ -1,0 +1,70 @@
+// docs/.vuepress/styles/_palette.scss
+
+// النصوص
+$vp-c-text: (
+  light: #312a2a,       // نص أساسي في Light Mode
+  dark: #fff4f4b7       // نص أساسي في Dark Mode
+);
+
+$vp-c-text-mute: (
+  light: #6c6c6c,
+  dark: #bbbbbb
+);
+
+$vp-c-text-subtle: (
+  light: #999999,
+  dark: #888888
+);
+
+// الخلفيات
+$vp-c-bg: (
+  light: #ffffff,
+  dark: #1e1e1e
+);
+
+$vp-c-bg-alt: (
+  light: #f5f5f5,
+  dark: #2b2b2b
+);
+
+$vp-c-bg-elv: (
+  light: #ffffff,
+  dark: #2c2c2c
+);
+
+// التابز (Code Tabs / Tabs)
+$vp-c-tab-bg: (
+  light: #eaeaea,       // خلفية التاب العادي Light
+  dark: #333333          // خلفية التاب العادي Dark
+);
+
+$vp-c-tab-active-bg: (
+  light: #0077e6,       // خلفية التاب النشط Light
+  dark: #3399ff          // خلفية التاب النشط Dark
+);
+
+$vp-c-tab-text: (
+  light: #312a2a,       // نص التاب Light
+  dark: #ffffff          // نص التاب Dark
+);
+
+$vp-c-tab-active-text: (
+  light: #ffffff,       // نص التاب النشط Light
+  dark: #000000          // نص التاب النشط Dark
+);
+
+// الظلال
+$vp-c-shadow: (
+  light: rgba(0, 0, 0, 0.1),
+  dark: rgba(0, 0, 0, 0.5)
+);
+
+// حجم الخط الأساسي
+$vp-font-size-base: 16px; // الافتراضي غالبًا 16px
+
+// أحجام إضافية
+$vp-font-size-sm: 14px;
+$vp-font-size-md: 16px;
+$vp-font-size-lg: 20px;
+$vp-font-size-xl: 24px;
+$vp-font-size-2xl: 32px;
