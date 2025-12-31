@@ -18,6 +18,7 @@ import * as clientConfig16 from '/home/yoyo/Documents/GitHub/kafeel-ERP-F-snippe
 import * as clientConfig17 from '/home/yoyo/Documents/GitHub/kafeel-ERP-F-snippets/docs/.vuepress/.temp/theme-hope/config.js'
 import * as clientConfig18 from '/home/yoyo/Documents/GitHub/kafeel-ERP-F-snippets/docs/.vuepress/.temp/markdown-chart/config.js'
 import * as clientConfig19 from '/home/yoyo/Documents/GitHub/kafeel-ERP-F-snippets/docs/.vuepress/.temp/md-enhance/config.js'
+import * as clientConfig20 from '/home/yoyo/Documents/GitHub/kafeel-ERP-F-snippets/node_modules/.pnpm/@vuepress+plugin-search@2.0.0-rc.121_typescript@5.9.3_vuepress@2.0.0-rc.24_@vuepress+bu_8f854bfa661fe4554163495139e268f9/node_modules/@vuepress/plugin-search/lib/client/config.js'
 
 export const clientConfigs = [
   clientConfig0,
@@ -40,4 +41,5 @@ export const clientConfigs = [
   clientConfig17,
   clientConfig18,
   clientConfig19,
+  clientConfig20,
 ].map((m) => m.default).filter(Boolean)

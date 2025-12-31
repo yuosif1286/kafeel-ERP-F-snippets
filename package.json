@@ -125,6 +125,7 @@
     "@vuepress/plugin-back-to-top": "2.0.0-rc.24",
     "@vuepress/plugin-markdown-chart": "2.0.0-rc.109",
     "@vuepress/plugin-markdown-tab": "2.0.0-rc.121",
+    "@vuepress/plugin-search": "2.0.0-rc.121",
     "@vuepress/theme-default": "2.0.0-rc.115",
     "@vueuse/core": "^13.9.0",
     "commitizen": "^4.3.1",

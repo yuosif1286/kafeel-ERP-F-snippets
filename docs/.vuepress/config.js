@@ -3,15 +3,15 @@ import { defineUserConfig } from 'vuepress'
 import { hopeTheme } from 'vuepress-theme-hope'
 import { mdEnhancePlugin } from 'vuepress-plugin-md-enhance'
 import { markdownChartPlugin } from '@vuepress/plugin-markdown-chart'
+import { searchPlugin } from '@vuepress/plugin-search'
 
 export default defineUserConfig({
   bundler: viteBundler(),
-  title: 'Kaffeel preFix',
+  title: 'Kaffeel Snippets for ERP-F',
   description: 'Awesome docs!',
   theme: hopeTheme({
     navbar: [
       { text: 'Home', link: '/' },
-      { text: 'Guide', link: '/guide/' },
       { text: 'ChangeLog', link: '/CHANGELOG.md' },
       {
     text: 'Social',
@@ -25,6 +25,9 @@ export default defineUserConfig({
       name: 'Mr.Yuosif',
       url: 'https://github.com/yuosif1286',
     },
+    fullscreen: true,
+    darkmode:'toggle',
+     defaultDark:true,
   footer: {
     display: true, // عرض الفوتر
     content: `
@@ -38,6 +41,7 @@ export default defineUserConfig({
         tabs: true,
         codetabs: true,
       },
+      search: true
     },
   }),
   plugins: [
@@ -45,6 +49,14 @@ export default defineUserConfig({
     mdEnhancePlugin({
       tabs: true,
       codetabs: true,
+    }),
+       searchPlugin({
+      locales: {
+        '/': {
+          placeholder: 'Search',
+        },
+      },
+      maxSuggestions: 10,
     }),
   ],
 })
