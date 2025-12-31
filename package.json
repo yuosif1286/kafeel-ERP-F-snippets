@@ -13,7 +13,8 @@
     "prepare": "husky",
     "release": "semantic-release",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "generate:md": "node scripts/snippets-json-to-md.js"
   },
   "categories": [
     "Snippets"
