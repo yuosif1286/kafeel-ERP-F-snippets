@@ -46,4 +46,5 @@ jobs:
           target_branch: gh-pages # branch to deploy to
           build_dir: docs/.vuepress/dist # VuePress output folder
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+
